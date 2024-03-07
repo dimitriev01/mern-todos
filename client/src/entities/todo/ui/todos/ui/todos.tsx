@@ -1,8 +1,7 @@
 import { useCallback, useEffect, useState } from "react"
 import { ITodo } from ".."
 import { getAllTodosRequest } from "../model/todos.actions"
-import { useAuth } from "shared/lib/hooks/use-auth"
-import { useToast } from "shared/lib/hooks"
+import { useAuth, useToast } from "shared/lib/hooks"
 import { TypeResponse } from "shared/api"
 import { Link } from "react-router-dom"
 

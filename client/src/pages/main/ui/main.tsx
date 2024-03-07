@@ -2,8 +2,7 @@ import { TodoList, createTodoRequest } from "entities/todo"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { TypeResponse } from "shared/api"
-import { useToast } from "shared/lib/hooks"
-import { useAuth } from "shared/lib/hooks/use-auth"
+import { useAuth, useToast } from "shared/lib/hooks"
 
 export default function Main() {
   const { token } = useAuth()

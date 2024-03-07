@@ -1,11 +1,11 @@
 import { pages } from "pages"
 import { Suspense } from "react"
-import { useAuth } from "shared/lib/hooks/use-auth"
 import { Router, RouterProvider } from "shared/lib/routes"
-import { Loader, MainLoader } from "shared/ui/loaders"
+import { MainLoader } from "shared/ui/loaders"
 import { Toast } from "shared/ui/toast"
 import { Layout } from "widgets/layout"
 import { AuthContext } from "./context"
+import { useAuth } from "shared/lib/hooks"
 
 const App = () => {
   const { token, login, logout, userId, isDoneAuth } = useAuth()

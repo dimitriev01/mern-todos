@@ -2,8 +2,7 @@ import { ITodo, Todo, getCurrentTodoRequest } from "entities/todo"
 import { useCallback, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { TypeResponse } from "shared/api"
-import { useToast } from "shared/lib/hooks"
-import { useAuth } from "shared/lib/hooks/use-auth"
+import { useAuth, useToast } from "shared/lib/hooks"
 import { Loader } from "shared/ui/loaders"
 
 export default function DetailTodo() {
