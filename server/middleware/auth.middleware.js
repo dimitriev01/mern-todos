@@ -1,4 +1,4 @@
-const config = require('config')
+const config = require('../config/db.config')
 const jwt = require('jsonwebtoken')
 
 module.exports = (req, res, next) => {
@@ -13,7 +13,7 @@ module.exports = (req, res, next) => {
       res.status(401).json({ status: 'error', errors: [`Unauthorized`] })
     }
 
-    const closedKey = jwt.verify(token, config.get('jwtKey'))
+    const closedKey = jwt.verify(token, config.jwtkey)
     req.user = closedKey;
     next()
   } catch (error) {

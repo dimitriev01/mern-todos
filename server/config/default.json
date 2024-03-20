@@ -1,6 +1,0 @@
-{
-    "port": 5000,
-    "mongoUri": "mongodb+srv://dazao3144:12345@cluster0.3hgqhyw.mongodb.net/",
-    "jwtKey": "Fix koora dev",
-    "BASE_URL": "http://localhost:5000"
-}

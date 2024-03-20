@@ -1,6 +1,7 @@
+require("dotenv").config();
 const { Router } = require('express');
+const config = require('../config/db.config')
 const bcrypt = require('bcryptjs')
-const config = require('config')
 const jwt = require('jsonwebtoken')
 const {check, validationResult} = require('express-validator')
 const User = require('../models/User')
@@ -92,7 +93,7 @@ router.post(
 
             const token = jwt.sign(
                 { userId: user.id }, 
-                config.get('jwtKey'),
+                config.jwtkey,
                 {expiresIn : '1h'}
             )
 
