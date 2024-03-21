@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 const corsConfig = {
-    origin: "http://localhost:5173",
+    origin: process.env.CLIENT_ORIGIN || "http://localhost:8081",
     credentials: true,
 };
 
@@ -27,7 +27,7 @@ if (process.env.NODE_ENV === 'production') {
     })
 }
 
-const PORT = process.env.DB_PORT || 5000;
+const PORT = process.env.NODE_DOCKER_PORT || 8080;
 
 const start = async () => {
     try {
